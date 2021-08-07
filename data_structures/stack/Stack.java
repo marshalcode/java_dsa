@@ -9,10 +9,6 @@ package data_structures.stack;
     printStack: O(n) where n is number of elements present in stack
 */
 
-// last in first out
-// insert on top (push)
-// remove the top plate (pop)
-
 /* 
     Push: Add an element to the top of a stack
     Pop: Remove an element from the top of a stack
@@ -22,12 +18,13 @@ package data_structures.stack;
 */
 
 /* 
-    A pointer called TOP is used to keep track of the top element in the stack.
-    When initializing the stack, we set its value to -1 so that we can check if the stack is empty by comparing TOP == -1.
-    On pushing an element, we increase the value of TOP and place the new element in the position pointed to by TOP.
-    On popping an element, we return the element pointed to by TOP and reduce its value.
-    Before pushing, we check if the stack is already full
-    Before popping, we check if the stack is already empty
+    Algo :-
+    - A pointer called TOP is used to keep track of the top element in the stack.
+    - When initializing the stack, we set its value to -1 so that we can check if the stack is empty by comparing TOP == -1.
+    - On pushing an element, we increase the value of TOP and place the new element in the position pointed to by TOP.
+    - On popping an element, we return the element pointed to by TOP and reduce its value.
+    - Before pushing, we check if the stack is already full
+    - Before popping, we check if the stack is already empty
 */
 
 public class Stack {
@@ -63,13 +60,10 @@ public class Stack {
         return top + 1;
     }
 
-    // Check if the stack is empty
     public Boolean isEmpty() {
         return top == -1;
     }
 
-    // Check if the stack is full
-    // O(1)
     public Boolean isFull() {
         return top == capacity - 1;
     }
